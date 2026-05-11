@@ -227,7 +227,7 @@ function buildFloorGrid() {
     // ── Group number banner ──
     const banner = document.createElement("div");
     banner.className = "group-banner";
-    banner.innerHTML = `GROUP <span>${g.num}</span> &nbsp;·&nbsp; ${g.cols.length} COLUMNS × ${g.rows} ROWS`;
+    banner.innerHTML = `GROUP <span>${g.num}</span>`; // &nbsp;·&nbsp; ${g.cols.length} COLUMNS × ${g.rows} ROWS`;
     block.appendChild(banner);
 
     // ── Letter strip (one cell per column) ──

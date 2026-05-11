@@ -400,7 +400,7 @@ header {
   text-transform: uppercase;
   margin-bottom: 5px;
   padding-left: 30px; /* align with cells past the row-gutter */
-  text-align: left;
+  text-align: center;
 }
 .group-banner span {
   color: var(--accent);
