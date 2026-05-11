@@ -1,0 +1,1500 @@
+{
+  "game_version": "1.0.45",
+  "rack_units": 47,
+  "rack_price": 1250,
+  "room_rows": 16,
+  "room_racks_per_row": 32,
+  "room_wall_blocks":
+  {
+    "rows": 18,
+    "columns": 18,
+    "starting_open_blocks": 18,
+    "starting_price": 1000,
+    "price_increase_rate": 1.02,
+    "price_increase_rounding": "half-to-even"
+  },
+  "room_row_coloum_splits":
+  [
+    4,
+    5,
+    4,
+    5,
+    4,
+    5,
+    5
+  ],
+  "cables": {
+    "cat6a": {
+        "name": "Cable copper CAT6E",
+        "length": 100,
+        "price": 500,
+        "stock_colors ": [
+            "#0100AB",
+            "#181818",
+            "#E0E0E0"
+        ],
+        "xp_to_unlock": 200,
+        "xp_to_unlock_custom_color": 800,
+        "ports_connectable_to": [
+            "rj45_ports"
+        ]
+    },
+    "fiber_1_lane": {
+        "name": "Cable fiber 1 lane",
+        "length": 200,
+        "price": 1000,
+        "stock_colors ": [
+            "#21A617"
+        ],
+        "xp_to_unlock": 500,
+        "xp_to_unlock_custom_color": 800,
+        "ports_connectable_to": [
+            "fiber_1_lane_ports",
+            "fiber_patch_ports"
+        ]
+    },
+    "fiber_4_lane": {
+        "name": "Cable fiber 4 lane (QSFP)",
+        "length": 500,
+        "price": 3000,
+        "stock_colors ": [
+            "#C8BD1B"
+        ],
+        "xp_to_unlock": 1500,
+        "xp_to_unlock_custom_color": 2000,
+        "ports_connectable_to": [
+            "fiber_4_lane_ports",
+            "fiber_patch_ports"
+        ]
+    }
+  },
+  "patch_panels":
+  {
+    "rj45":
+    {
+      "name": "Patch panel RJ45",
+      "rack_units": 2,
+      "rj45_ports": 18,
+      "fiber_patch_ports": 0,
+      "xp_to_unlock": 0,
+      "price": 250
+    },
+    "combo":
+    {
+      "name": "Patch panel Combo",
+      "rack_units": 2,
+      "rj45_ports": 10,
+      "fiber_patch_ports": 8,
+      "xp_to_unlock": 500,
+      "price": 450
+    },
+    "fiber":
+    {
+      "name": "Patch panel Fiber",
+      "rack_units": 2,
+      "rj45_ports": 0,
+      "fiber_patch_ports": 18,
+      "xp_to_unlock": 500,
+      "price": 450
+    }
+  },
+  "ports":
+  {
+    "rj45_ports":
+    {
+      "gpbs_max": 10
+    },
+    "sfp+_sfp28_ports":
+    {
+      "gpbs_max": 25
+    },
+    "qsfP+_ports":
+    {
+      "gpbs_max": 40
+    },
+    "fiber_1_lane_ports": {
+      "gpbs_max": 25
+    },
+    "fiber_4_lane_ports": {
+      "gpbs_max": 40
+    },
+    "fiber_patch_ports":
+    {
+      "gpbs_max": 100
+    }
+  },
+  "spf_modules":
+  {
+    "rj45":
+    {
+      "name": "SFP+ Module RJ45 10Gbps",
+      "gpbs": 10,
+      "cable": "CAT6",
+      "compatible_port": "sfp+_sfp28_ports",
+      "xp_to_unlock": 500,
+      "price": 50,
+      "rj45_ports": 1
+    },
+    "fiber_10":
+    {
+      "name": "SFP+ Module Fibre 10Gbps",
+      "gpbs": 10,
+      "cable": "Fibre 1 lane",
+      "compatible_port": "sfp+_sfp28_ports",
+      "xp_to_unlock": 700,
+      "price": 70,
+      "fiber_1_lane_ports": 1
+    },
+    "fiber_25":
+    {
+      "name": "SFP28 Module Fibre 25Gbps",
+      "gpbs": 25,
+      "cable": "Fibre 1 lane",
+      "compatible_port": "sfp+_sfp28_ports",
+      "xp_to_unlock": 1200,
+      "price": 180,
+      "fiber_1_lane_ports": 1
+    },
+    "fiber_40":
+    {
+      "name": "QSFP+ Module Fibre 40Gbps",
+      "gpbs": 40,
+      "cable": "Fibre 4 lanes (QSFP)",
+      "compatible_port": "qsfP+_ports",
+      "xp_to_unlock": 2400,
+      "price": 300,
+      "fiber_4_lane_ports": 1
+    }
+  },
+  "switches":
+  {
+    "16 Port":
+    {
+      "name": "16 x 10Gbps RJ45",
+      "rack_units": 1,
+      "rj45_ports": 16,
+      "sfp+_sfp28_ports": 0,
+      "qsfP+_ports": 0,
+      "xp_to_unlock": 0,
+      "price": 250
+    },
+    "4 Port":
+    {
+      "name": "4 x SFP+/SFP28",
+      "rack_units": 1,
+      "rj45_ports": 0,
+      "sfp+_sfp28_ports": 4,
+      "qsfP+_ports": 0,
+      "xp_to_unlock": 400,
+      "price": 400
+    },
+    "4 + 16 Port":
+    {
+      "name": "4 x QSFP+ 16 x SFP+/SFP28",
+      "rack_units": 1,
+      "rj45_ports": 0,
+      "sfp+_sfp28_ports": 16,
+      "qsfP+_ports": 4,
+      "xp_to_unlock": 2100,
+      "price": 3500
+    },
+    "32 Port":
+    {
+      "name": "32 x QSFP+",
+      "rack_units": 1,
+      "rj45_ports": 0,
+      "sfp+_sfp28_ports": 0,
+      "qsfP+_ports": 32,
+      "xp_to_unlock": 2500,
+      "price": 3800
+    }
+  },
+  "servers":
+  {
+    "system_x":
+    [
+      {
+        "rack_units": 3,
+        "ipos_k": 5,
+        "xp_to_unlock": 0,
+        "price": 400,
+        "color": "#9D8F2F",
+        "eol": 4,
+        "gbps": 0.25,
+        "rj45_ports": 2
+      },
+      {
+        "rack_units": 7,
+        "ipos_k": 12,
+        "xp_to_unlock": 2200,
+        "price": 1600,
+        "color": "#9D8F2F",
+        "eol": 4,
+        "gbps": 0.6,
+        "rj45_ports": 2
+      }
+    ],
+    "risc":
+    [
+      {
+        "rack_units": 3,
+        "ipos_k": 5,
+        "xp_to_unlock": 100,
+        "price": 450,
+        "color": "#0C07AE",
+        "eol": 5,
+        "gbps": 0.25,
+        "rj45_ports": 2
+      },
+      {
+        "rack_units": 7,
+        "ipos_k": 12,
+        "xp_to_unlock": 3000,
+        "price": 1750,
+        "color": "#0C07AE",
+        "eol": 5,
+        "gbps": 0.6,
+        "rj45_ports": 2
+      }
+    ],
+    "mainframe":
+    [
+      {
+        "rack_units": 3,
+        "ipos_k": 5,
+        "xp_to_unlock": 480,
+        "price": 850,
+        "color": "#7C187C",
+        "eol": 7,
+        "gbps": 0.25,
+        "rj45_ports": 2
+      },
+      {
+        "rack_units": 7,
+        "ipos_k": 12,
+        "xp_to_unlock": 6500,
+        "price": 2000,
+        "color": "#7C187C",
+        "eol": 5,
+        "gbps": 0.6,
+        "rj45_ports": 2
+      }
+    ],
+    "gpu":
+    [
+      {
+        "rack_units": 3,
+        "ipos_k": 5,
+        "xp_to_unlock": 350,
+        "price": 550,
+        "color": "#3C8730",
+        "eol": 3,
+        "gbps": 0.25,
+        "rj45_ports": 2
+      },
+      {
+        "rack_units": 7,
+        "ipos_k": 12,
+        "xp_to_unlock": 5500,
+        "price": 2200,
+        "color": "#3C8730",
+        "eol": 3,
+        "gbps": 0.6,
+        "rj45_ports": 2
+      }
+    ]
+  },
+  "companies":
+  [
+    {
+      "number": 1,
+      "name": "Bermuda Triangle Backup",
+      "reputation": 0,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 40,
+          "subnet": "/28",
+          "usable_ip_addresses": 13
+        },
+        "risc":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "mainframe":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 40,
+      "total_ip_addresses": 13
+    },
+    {
+      "number": 2,
+      "name": "Dad Joke Database",
+      "reputation": 10,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 80,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "mainframe":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 80,
+      "total_ip_addresses": 29
+    },
+    {
+      "number": 3,
+      "name": "UFO Download Station",
+      "reputation": 20,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "mainframe":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 100,
+      "total_ip_addresses": 29
+    },
+    {
+      "number": 4,
+      "name": "TaxHaven Holdings",
+      "reputation": 30,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 120,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "mainframe":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 120,
+      "total_ip_addresses": 29
+    },
+    {
+      "number": 5,
+      "name": "FakeNews Daily",
+      "reputation": 40,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 50,
+          "subnet": "/28",
+          "usable_ip_addresses": 13
+        },
+        "mainframe":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 150,
+      "total_ip_addresses": 42
+    },
+    {
+      "number": 6,
+      "name": "Pollution Plus",
+      "reputation": 50,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 70,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 170,
+      "total_ip_addresses": 58
+    },
+    {
+      "number": 7,
+      "name": "ClimateChange Industries",
+      "reputation": 60,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 90,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 190,
+      "total_ip_addresses": 58
+    },
+    {
+      "number": 8,
+      "name": "Probability Manufacturing",
+      "reputation": 75,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 70,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 70,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 240,
+      "total_ip_addresses": 87
+    },
+    {
+      "number": 9,
+      "name": "Counterfeit Good Distribution",
+      "reputation": 90,
+      "switch": "4 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 120,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 80,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 90,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 290,
+      "total_ip_addresses": 87
+    },
+    {
+      "number": 10,
+      "name": "Madeep",
+      "reputation": 110,
+      "switch": "4 + 16 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 110,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 350,
+      "total_ip_addresses": 87
+    },
+    {
+      "number": 11,
+      "name": "Flat Earth Servers",
+      "reputation": 135,
+      "switch": "4 + 16 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 160,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 120,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 130,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 0,
+          "subnet": "",
+          "usable_ip_addresses": 0
+        }
+      },
+      "total_iops_k": 520,
+      "total_ip_addresses": 119
+    },
+    {
+      "number": 12,
+      "name": "Wealth Track",
+      "reputation": 165,
+      "switch": "4 + 16 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "mainframe":
+        {
+          "ipos_k": 80,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        }
+      },
+      "total_iops_k": 480,
+      "total_ip_addresses": 148
+    },
+    {
+      "number": 13,
+      "name": "Union Busters",
+      "reputation": 200,
+      "switch": "4 + 16 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 250,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "gpu":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        }
+      },
+      "total_iops_k": 550,
+      "total_ip_addresses": 148
+    },
+    {
+      "number": 14,
+      "name": "Esistential Crisis Cloud",
+      "reputation": 250,
+      "switch": "4 + 16 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 120,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 120,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 120,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 270,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        }
+      },
+      "total_iops_k": 630,
+      "total_ip_addresses": 148
+    },
+    {
+      "number": 15,
+      "name": "Ludus",
+      "reputation": 285,
+      "switch": "4 + 16 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "risc":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        }
+      },
+      "total_iops_k": 720,
+      "total_ip_addresses": 212
+    },
+    {
+      "number": 16,
+      "name": "Healtcare Denial",
+      "reputation": 340,
+      "switch": "4 + 16 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 160,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 320,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 160,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "gpu":
+        {
+          "ipos_k": 160,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        }
+      },
+      "total_iops_k": 800,
+      "total_ip_addresses": 308
+    },
+    {
+      "number": 17,
+      "name": "Student Hub",
+      "reputation": 405,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 180,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 180,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "mainframe":
+        {
+          "ipos_k": 360,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 180,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        }
+      },
+      "total_iops_k": 900,
+      "total_ip_addresses": 308
+    },
+    {
+      "number": 18,
+      "name": "Houseplant Emotional Support",
+      "reputation": 480,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "mainframe":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "gpu":
+        {
+          "ipos_k": 350,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 950,
+      "total_ip_addresses": 308
+    },
+    {
+      "number": 19,
+      "name": "SockFetish Digital",
+      "reputation": 570,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 500,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "risc":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "mainframe":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "gpu":
+        {
+          "ipos_k": 100,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        }
+      },
+      "total_iops_k": 1000,
+      "total_ip_addresses": 276
+    },
+    {
+      "number": 20,
+      "name": "Midlife Crisis Consulting",
+      "reputation": 675,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 240,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 500,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 240,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "gpu":
+        {
+          "ipos_k": 120,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        }
+      },
+      "total_iops_k": 1100,
+      "total_ip_addresses": 276
+    },
+    {
+      "number": 21,
+      "name": "SimpeHub Premium",
+      "reputation": 800,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 240,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "mainframe":
+        {
+          "ipos_k": 600,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 240,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        }
+      },
+      "total_iops_k": 1220,
+      "total_ip_addresses": 276
+    },
+    {
+      "number": 22,
+      "name": "Motivational Sloth Network",
+      "reputation": 950,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 220,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 280,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "mainframe":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 600,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1240,
+      "total_ip_addresses": 276
+    },
+    {
+      "number": 23,
+      "name": "RoboticsHub",
+      "reputation": 1120,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 440,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "risc":
+        {
+          "ipos_k": 320,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 320,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 320,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1400,
+      "total_ip_addresses": 500
+    },
+    {
+      "number": 24,
+      "name": "Make Mie",
+      "reputation": 1320,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "risc":
+        {
+          "ipos_k": 670,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        },
+        "mainframe":
+        {
+          "ipos_k": 340,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 340,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1490,
+      "total_ip_addresses": 532
+    },
+    {
+      "number": 25,
+      "name": "Aero Dynasty",
+      "reputation": 1560,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 250,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 350,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 640,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        },
+        "gpu":
+        {
+          "ipos_k": 350,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1590,
+      "total_ip_addresses": 564
+    },
+    {
+      "number": 26,
+      "name": "Standard",
+      "reputation": 1840,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 400,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 660,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        }
+      },
+      "total_iops_k": 1560,
+      "total_ip_addresses": 564
+    },
+    {
+      "number": 27,
+      "name": "Richards and Richards",
+      "reputation": 2180,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 700,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        },
+        "risc":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1600,
+      "total_ip_addresses": 628
+    },
+    {
+      "number": 28,
+      "name": "Dewey Chaeatm",
+      "reputation": 2580,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 300,
+          "subnet": "/35",
+          "usable_ip_addresses": 0
+        },
+        "risc":
+        {
+          "ipos_k": 900,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        },
+        "mainframe":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1800,
+      "total_ip_addresses": 503
+    },
+    {
+      "number": 29,
+      "name": "AeroSpace",
+      "reputation": 3050,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 240,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 240,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "mainframe":
+        {
+          "ipos_k": 1040,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        },
+        "gpu":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1820,
+      "total_ip_addresses": 500
+    },
+    {
+      "number": 30,
+      "name": "Bull and Bearly",
+      "reputation": 3600,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "risc":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 800,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        }
+      },
+      "total_iops_k": 1700,
+      "total_ip_addresses": 628
+    },
+    {
+      "number": 31,
+      "name": "Waseku",
+      "reputation": 4250,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 500,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "risc":
+        {
+          "ipos_k": 440,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 440,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 440,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1820,
+      "total_ip_addresses": 500
+    },
+    {
+      "number": 32,
+      "name": "Sweatshop Effieciency",
+      "reputation": 5020,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 360,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "risc":
+        {
+          "ipos_k": 1000,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        },
+        "mainframe":
+        {
+          "ipos_k": 140,
+          "subnet": "/27",
+          "usable_ip_addresses": 29
+        },
+        "gpu":
+        {
+          "ipos_k": 360,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1860,
+      "total_ip_addresses": 532
+    },
+    {
+      "number": 33,
+      "name": "Pyramid Power",
+      "reputation": 5930,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 240,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "mainframe":
+        {
+          "ipos_k": 1000,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        },
+        "gpu":
+        {
+          "ipos_k": 400,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        }
+      },
+      "total_iops_k": 1940,
+      "total_ip_addresses": 564
+    },
+    {
+      "number": 34,
+      "name": "EvilCorp",
+      "reputation": 7000,
+      "switch": "32 Port",
+      "applications":
+      {
+        "system_x":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "risc":
+        {
+          "ipos_k": 200,
+          "subnet": "/26",
+          "usable_ip_addresses": 61
+        },
+        "mainframe":
+        {
+          "ipos_k": 300,
+          "subnet": "/25",
+          "usable_ip_addresses": 125
+        },
+        "gpu":
+        {
+          "ipos_k": 1280,
+          "subnet": "/24",
+          "usable_ip_addresses": 253
+        }
+      },
+      "total_iops_k": 1980,
+      "total_ip_addresses": 500
+    }
+  ]
+}

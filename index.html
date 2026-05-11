@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Center Floor Plan</title>
+    <link rel="stylesheet" href="res/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">DC<span>/</span>PLAN</div>
+      <div class="hdivider"></div>
+      <div class="view-tabs">
+        <button
+          class="view-tab active"
+          data-view="type"
+          onclick="setView('type')"
+        >
+          Rack Type
+        </button>
+        <button
+          class="view-tab"
+          data-view="customer"
+          onclick="setView('customer')"
+        >
+          Customer
+        </button>
+        <button
+          class="view-tab"
+          data-view="combined"
+          onclick="setView('combined')"
+        >
+          Combined
+        </button>
+      </div>
+      <div class="hdivider"></div>
+      <div class="paint-indicator" id="paintIndicator">
+        <div class="paint-dot"></div>
+        <span id="paintLabel">SELECT MODE</span>
+      </div>
+      <div class="header-stats">
+        <div class="stat">
+          <span class="stat-val" id="totalRacks">0</span>TOTAL
+        </div>
+        <div class="stat">
+          <span class="stat-val" id="assignedRacks">0</span>ASSIGNED
+        </div>
+        <div class="stat">
+          <span class="stat-val" id="typedRacks">0</span>RACKS
+        </div>
+        <div class="stat">
+          <span class="stat-val" id="emptyRacks">0</span>EMPTY
+        </div>
+      </div>
+    </header>
+
+    <div class="main">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Rack Type</div>
+          <div class="rack-types" id="rackTypeList"></div>
+          <div class="tool-row">
+            <button class="tool-btn" onclick="activateClearMode()">
+              ⌫ Erase
+            </button>
+            <button class="tool-btn" onclick="setActiveRackType(null)">
+              ✕ Deselect
+            </button>
+            <button class="tool-btn danger" onclick="clearAll()">
+              ⚠ Reset
+            </button>
+          </div>
+          <div class="tool-row">
+            <button class="tool-btn" onclick="saveData()">💾 Save</button>
+            <button class="tool-btn" onclick="loadData()">📂 Load</button>
+          </div>
+        </div>
+        <div class="customer-search-wrap">
+          <div class="sidebar-title" style="margin-bottom: 7px">
+            Customer Assignment
+          </div>
+          <input
+            class="customer-search"
+            id="customerSearch"
+            type="text"
+            placeholder="Search customer…"
+            oninput="buildCustomerList(this.value)"
+          />
+        </div>
+        <div class="customer-list" id="customerList"></div>
+      </div>
+
+      <!-- FLOOR -->
+      <div class="floor-wrapper">
+        <div class="floor-area">
+          <div class="floor-label">Server Room — Floor Plan</div>
+          <div class="floor-grid" id="floorGrid"></div>
+        </div>
+        <div class="legend-bar" id="legendBar"></div>
+      </div>
+    </div>
+
+    <!-- Context menu -->
+    <div class="ctx-menu" id="ctxMenu">
+      <div class="ctx-menu-title" id="ctxTitle">RACK OPTIONS</div>
+      <div id="ctxTypeSection"></div>
+      <div class="ctx-sep"></div>
+      <div id="ctxCustomerSection"></div>
+      <div class="ctx-sep"></div>
+      <div class="ctx-item" onclick="ctxClearCustomer()">
+        <div class="ctx-swatch" style="background: #2a1a1a"></div>
+        Remove Customer
+      </div>
+      <div class="ctx-item" onclick="ctxClearRack()">
+        <div class="ctx-swatch" style="background: #111"></div>
+        Clear Rack
+      </div>
+    </div>
+
+    <div class="notif" id="notif"></div>
+
+    <script src="res/js/floorplan.js"></script>
+  </body>
+</html>
